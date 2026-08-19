@@ -1,2 +1,2 @@
-# OSOC_projecy
+# OSOC_project
 hackathon project
