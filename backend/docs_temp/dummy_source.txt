@@ -1,0 +1,17 @@
+DUMMY SOURCE FILE — FOR TESTING RETRIEVAL PIPELINE ONLY
+(Replace with real RTI Act 2005 / Model Tenancy Act text once available from A)
+ 
+Section 1: Tenant Deposit Rules
+A landlord must return the security deposit to the tenant within 30 days of the tenant vacating the property. The landlord may deduct amounts for documented damages beyond normal wear and tear, unpaid rent, or unpaid utility bills, but must provide an itemized list of such deductions in writing. If the landlord fails to return the deposit or provide an itemized deduction list within 30 days, the tenant may file a complaint with the local rent authority or approach the Rent Tribunal.
+ 
+Section 2: Filing a Tenant Deposit Complaint
+A tenant seeking to recover a withheld deposit should first send a written notice to the landlord requesting the return of the deposit within a specified period (commonly 15 days). If the landlord does not respond or refuses, the tenant may file a formal complaint with the Rent Authority, including proof of tenancy (rental agreement), proof of deposit payment (receipt or bank transfer record), and any written correspondence with the landlord.
+ 
+Section 3: Right to Information — Filing an RTI Request
+Any citizen may file a Right to Information (RTI) application with a public authority to request information related to that authority's functions. The application must include the applicant's name and address, the specific information requested, the name of the Public Information Officer (PIO) or department, and the prescribed application fee. The public authority is required to respond within 30 days of receiving the request.
+ 
+Section 4: RTI Application Format
+An RTI application should clearly state: (1) the applicant's full name and postal address, (2) the department or public authority the request is directed to, (3) a clear and specific description of the information being sought, (4) the mode of payment for the application fee, and (5) the date of filing. Vague or overly broad requests may be returned for clarification by the Public Information Officer.
+ 
+Section 5: Grounds for Refusal of an RTI Request
+A public authority may refuse to provide information under certain exemptions, including information that would prejudicially affect the sovereignty and integrity of the country, information related to ongoing investigations, or information that would constitute an unwarranted invasion of the privacy of an individual, unless the public interest in disclosure outweighs the harm to protected interests.
