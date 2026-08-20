@@ -7,7 +7,7 @@ load_dotenv()
 
 app = FastAPI()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-model = genai.GenerativeModel("gemini-2.5-flash")
+model = genai.GenerativeModel("gemini-3.6-flash")
 
 @app.get("/test")
 def test():
