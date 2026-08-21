@@ -91,10 +91,17 @@ Answer:"""
 
 RTI_FIELDS = ["applicant_name", "applicant_address", "department_name", "subject", "information_requested", "date"]
 TENANCY_FIELDS = ["applicant_name", "applicant_address", "landlord_name", "property_address", "deposit_amount", "date_vacated", "specific_ask"]
+VALID_DOCUMENT_TYPES = ("rti", "tenancy_complaint")
 
 class GenerateDocRequest(BaseModel):
     conversation: str
     document_type: str  # "rti" or "tenancy_complaint"
+
+
+class FieldExtractionError(Exception):
+    """Raised when the LLM's extraction response can't be parsed as valid JSON."""
+    pass
+
 
 def extract_fields(conversation: str, document_type: str):
     fields = RTI_FIELDS if document_type == "rti" else TENANCY_FIELDS
@@ -112,7 +119,13 @@ Return format: {{"field_name": "value", ...}}"""
     response = model.generate_content(prompt)
     text = response.text.strip()
     text = text.replace("```json", "").replace("```", "").strip()
-    return json.loads(text)
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        # LLM didn't return clean JSON (extra prose, truncated output, etc.)
+        # Don't crash — let the caller turn this into a graceful response.
+        raise FieldExtractionError(f"Could not parse extraction response: {text[:200]!r}")
 
 
 def build_rti_docx(fields: dict) -> str:
@@ -158,7 +171,22 @@ def build_tenancy_docx(fields: dict) -> str:
 
 @app.post("/generate-document")
 def generate_document(request: GenerateDocRequest):
-    fields = extract_fields(request.conversation, request.document_type)
+    # Validate document_type BEFORE extraction — previously an invalid type
+    # silently fell through to TENANCY_FIELDS instead of erroring cleanly.
+    if request.document_type not in VALID_DOCUMENT_TYPES:
+        return {"error": "document_type must be 'rti' or 'tenancy_complaint'"}
+
+    try:
+        fields = extract_fields(request.conversation, request.document_type)
+    except FieldExtractionError:
+        # Graceful fallback instead of a raw 500 crash on bad LLM output.
+        fallback_fields = RTI_FIELDS if request.document_type == "rti" else TENANCY_FIELDS
+        return {
+            "needs_more_info": True,
+            "missing_fields": fallback_fields,
+            "extracted_so_far": {},
+            "error": "Could not understand the conversation well enough to extract details. Please try rephrasing with clearer information."
+        }
 
     missing = [f for f in fields if fields[f] is None]
     if missing:
@@ -166,10 +194,8 @@ def generate_document(request: GenerateDocRequest):
 
     if request.document_type == "rti":
         filepath = build_rti_docx(fields)
-    elif request.document_type == "tenancy_complaint":
-        filepath = build_tenancy_docx(fields)
     else:
-        return {"error": "document_type must be 'rti' or 'tenancy_complaint'"}
+        filepath = build_tenancy_docx(fields)
 
     return FileResponse(
         filepath,
