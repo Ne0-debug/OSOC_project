@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NyayaSetu | Know Your Rights</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Top utility bar -->
+  <header class="top-bar">
+    <div class="container top-content">
+      <p>Independent citizen rights &amp; assistance platform</p>
+
+      <div class="top-links">
+        <button type="button">English ▾</button>
+        <button type="button">हिंदी</button>
+        <button type="button">Contact</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="#home" class="logo" aria-label="NyayaSetu home">
+        <img src="assets/nyayasetu-logo.png" alt="NyayaSetu">
+      </a>
+
+      <button class="menu-button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links">
+        <a class="active" href="#home">Home</a>
+        <a href="#guidance">Rights &amp; Law</a>
+        <a href="#schemes">Government Schemes</a>
+        <a href="#help">Ask NyayaSetu</a>
+        <a href="#about">About</a>
+      </div>
+
+      <label class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6"></circle>
+          <path d="m16 16 4 4"></path>
+        </svg>
+        <input type="search" placeholder="Search" aria-label="Search">
+      </label>
+    </div>
+  </nav>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="small-title">CITIZEN RIGHTS &amp; ASSISTANCE</p>
+
+          <h1>
+            Know Your Rights.<br>
+            <span>Know Your Options.</span>
+          </h1>
+
+          <p class="hero-text">
+            Understand your fundamental rights, discover relevant government
+            support, and get clear guidance for common legal and civic
+            challenges in simple language.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="primary-btn scroll-help">
+              Get Help <span>→</span>
+            </button>
+
+            <button class="secondary-btn scroll-guidance">
+              Explore Your Rights
+            </button>
+          </div>
+
+          <p class="hero-note">
+            General guidance for citizens. Verify important details with official sources.
+          </p>
+        </div>
+
+        <div class="hero-art">
+          <img
+            src="assets/hero-citizen-advisor.png"
+            alt="A citizen speaking with a legal advisor"
+            class="hero-illustration"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Four services -->
+    <section class="guidance-section" id="guidance">
+      <div class="container">
+        <div class="quick-grid">
+          <article class="quick-card">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v18M5 7h14M7 7 4 13h6L7 7m10 0-3 6h6l-3-6M5 18h14"/>
+            </svg>
+
+            <h3>Legal &amp; Rights Help</h3>
+            <p>Understand your rights in everyday disputes and legal situations.</p>
+
+            <button
+              class="learn-btn"
+              data-message="Explore basic rights, records to keep, and official places to verify information."
+            >
+              Explore guidance <span>→</span>
+            </button>
+          </article>
+
+          <article class="quick-card">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m3 10 9-7 9 7v10H3V10Zm5 10v-6h8v6"/>
+            </svg>
+
+            <h3>Housing &amp; Tenant Issues</h3>
+            <p>Guidance for landlord, rent, deposit, notice, and housing concerns.</p>
+
+            <button
+              class="learn-btn"
+              data-message="Keep your agreement, payment proof, and written communication. Verify suitable local rent or legal-aid support."
+            >
+              Explore guidance <span>→</span>
+            </button>
+          </article>
+
+          <article class="quick-card" id="schemes">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="3" width="16" height="18" rx="1"/>
+              <path d="M8 8h8M8 12h8M8 16h5"/>
+            </svg>
+
+            <h3>Government Schemes</h3>
+            <p>Discover support categories and understand where to verify details.</p>
+
+            <button
+              class="learn-btn"
+              data-message="Browse official government portals to check current eligibility, documents, and application steps."
+            >
+              Find support <span>→</span>
+            </button>
+          </article>
+
+          <article class="quick-card">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 5h14v10H9l-4 4V5Z"/>
+              <path d="M9 9h6M9 12h4"/>
+            </svg>
+
+            <h3>Ask NyayaSetu</h3>
+            <p>Describe your situation and receive organised general guidance.</p>
+
+            <button class="learn-btn scroll-help">
+              Start a conversation <span>→</span>
+            </button>
+          </article>
+        </div>
+
+        <!-- Common situations -->
+        <div class="section-heading">
+          <p class="small-title">COMMON SITUATIONS</p>
+          <h2>How can we help you today?</h2>
+          <p>Choose a situation to see where you can start.</p>
+        </div>
+
+        <div class="problem-grid" id="help">
+          <button
+            class="problem-card"
+            data-title="Road or public dispute"
+            data-text="Start by writing down what happened, keeping any evidence, and identifying whether a local traffic, municipal, police, or legal-aid service is the right place to ask for help."
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 17h18M5 17l2-9h10l2 9M8 17v2m8-2v2M8 11h8"/>
+            </svg>
+            <span>I had a dispute on the road</span>
+            <b>→</b>
+          </button>
+
+          <button
+            class="problem-card"
+            data-title="Security deposit concern"
+            data-text="Gather your rental agreement, payment proof, and messages. Consider sending a clear written request, then verify the appropriate local rent, housing, consumer, or legal-aid channel."
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="8" cy="15" r="3"/>
+              <path d="m10 13 9-9 2 2-9 9M16 7l2 2"/>
+            </svg>
+            <span>My landlord is refusing my security deposit</span>
+            <b>→</b>
+          </button>
+
+          <button
+            class="problem-card"
+            data-title="Government benefit issue"
+            data-text="Use the official scheme portal or local office to check your application status. Keep reference numbers and verify whether documents, bank details, or verification are pending."
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="6" width="18" height="12" rx="1"/>
+              <path d="M3 10h18M7 14h4"/>
+            </svg>
+            <span>I am not receiving a government benefit</span>
+            <b>→</b>
+          </button>
+
+          <button
+            class="problem-card"
+            data-title="Understanding your rights"
+            data-text="Start with the relevant topic, such as housing, workplace, safety, consumer, or public services. Verify important information with official sources or qualified professionals."
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h7a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H4V4Zm16 0h-7a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h7V4Z"/>
+            </svg>
+            <span>I want to understand my legal rights</span>
+            <b>→</b>
+          </button>
+
+          <button
+            class="problem-card"
+            data-title="Finding a scheme"
+            data-text="Explore official resources based on your location and needs. Scheme eligibility changes, so always confirm requirements using the relevant government portal."
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10" cy="10" r="6"/>
+              <path d="m15 15 5 5M8 10h4M10 8v4"/>
+            </svg>
+            <span>I don't know which government scheme applies to me</span>
+            <b>→</b>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust -->
+    <section class="trust-section">
+      <div class="container trust-layout">
+        <div>
+          <p class="small-title">INFORMATION YOU CAN UNDERSTAND</p>
+          <h2>Clear guidance.<br>Responsible support.</h2>
+          <p>
+            NyayaSetu helps citizens understand possible options in clear language.
+            It does not replace qualified legal advice.
+          </p>
+        </div>
+
+        <div class="trust-items">
+          <div>
+            <span>01</span>
+            <strong>Simple</strong>
+            <small>Clear information in everyday language.</small>
+          </div>
+
+          <div>
+            <span>02</span>
+            <strong>Relevant</strong>
+            <small>Guidance organised around common situations.</small>
+          </div>
+
+          <div>
+            <span>03</span>
+            <strong>Responsible</strong>
+            <small>Points toward appropriate official resources.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="infoModal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-modal" aria-label="Close dialog">×</button>
+
+      <p class="small-title">NYAYASETU GUIDANCE</p>
+      <h2 id="modalTitle">Guidance</h2>
+      <p id="modalText"></p>
+
+      <button class="primary-btn close-action">
+        I Understand <span>→</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="about">
+    <div class="container footer-content">
+      <div>
+        <a href="#home" class="logo footer-logo">
+          <img src="assets/nyayasetu-logo.png" alt="NyayaSetu">
+        </a>
+
+        <p>Helping citizens understand their rights and options.</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <strong>Explore</strong>
+          <a href="#guidance">Rights &amp; Law</a>
+          <a href="#schemes">Government Schemes</a>
+          <a href="#help">Ask NyayaSetu</a>
+        </div>
+
+        <div>
+          <strong>Information</strong>
+          <a href="#about">About</a>
+          <a href="#home">Privacy</a>
+          <a href="#home">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 NyayaSetu. All rights reserved.</p>
+      <p>
+        NyayaSetu is an independent citizen-assistance prototype and is not
+        an official Government of India website.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
